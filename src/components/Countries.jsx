@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Countries = ({ loading, countries }) => {
 
@@ -33,4 +33,4 @@ const Countries = ({ loading, countries }) => {
     )
 }
 
-export default Countries
+export default Countries;
