@@ -20,7 +20,9 @@ const App = () => {
         await fetch('https://restcountries.com/v3.1/all')
           .then(resp => resp.json())
           .then(data => data)
-      setCountries(response);
+      setCountries(response.sort(function(a, b) {
+        return a.name.common.localeCompare(b.name.common)
+    }));
       setLoading(false);
     }
     getCountries()

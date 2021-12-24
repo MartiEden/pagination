@@ -11,10 +11,11 @@ const Countries = ({ loading, countries }) => {
             <ul className="list-group mb-2">
                 {
                     countries.map((country, i) => {
+
                         return (
                             <li
                                 className="list-group-item"
-                                key={`${country.name}_${i}`}>
+                                key={`${country.name.common}_${i}`}>
 
                                 <img
                                     className="flag mr-2"
