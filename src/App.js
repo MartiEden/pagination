@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Countries from './components/Countries';
 import Pagination from './components/Pagination';
+import Buttons from './components/Buttons';
 
 const App = () => {
   const [countries, setCountries] = useState([])
@@ -51,15 +52,7 @@ const App = () => {
         paginate={paginate}
         currentPage={currentPage}
       />
-      <section className="buttons mt-4 mb-4">
-
-        {
-          currentPage !== 1 ? (
-            <button className="btn btn-primary mr-4" onClick={onPrev}>Prev Page</button>
-          ) : false
-        }
-        <button className="btn btn-primary" onClick={onNext}>Next Page</button>
-      </section>
+      <Buttons currentPage={currentPage} onNext={onNext} onPrev={onPrev}></Buttons>
 
     </section>
   )
