@@ -53,7 +53,6 @@ const App = () => {
         currentPage={currentPage}
       />
       <Buttons currentPage={currentPage} onNext={onNext} onPrev={onPrev}></Buttons>
-
     </section>
   )
 }
