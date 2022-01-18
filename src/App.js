@@ -24,6 +24,15 @@ const App = () => {
       setCountries(response.sort(function (a, b) {
         return a.name.common.localeCompare(b.name.common)
       }));
+      
+//       AS VARIANT
+//        setCountries(response.sort(function (a, b) {
+//         if (a.name.common < b.name.common) { return -1; }
+//         if (a.name.common > b.name.common) { return 1; }
+//         return 0;
+
+//       }));
+      
       setLoading(false);
     }
     getCountries()
